@@ -1,0 +1,130 @@
+.LetsConnect {
+    display: flex;
+    flex-direction: column; /* Default to column for small screens */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #6b6969;
+    border-radius: 10px; /* Add rounding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.LetsConnect hr {
+    height: 1px;
+    width: 80%;
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 20px 0;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.left h1, .right h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.left p {
+    margin: 5px 0; /* Add some margin for better spacing */
+    color: #fff;
+    text-align: center;
+}
+
+.right input, .right textarea {
+    margin: 10px 0; /* Increased margin for better spacing */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border 0.3s; /* Smooth transition for border change */
+}
+
+.right button {
+    margin: 5px;
+    padding: 10px 20px; /* Button padding for better click area */
+    border-radius: 5px;
+    border: none; /* Remove default button border */
+    background-color: #159646; /* Button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.right button:hover {
+    background-color: #1a7d30; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width for input area */
+    max-width: 400px; /* Limit max width for larger screens */
+}
+
+.inputWithIcon {
+    position: relative;
+    margin: 0;
+}
+
+.inputWithIcon img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.inputWithIcon input {
+    width: 90%; /* Full width input */
+    padding-left: 40px; /* Adjust based on the width of the icon */
+    border: 1px solid #ccc; /* Neutral border color */
+    border-radius: 10px;
+}
+
+.inputWithIcon input:hover {
+    border: 1px solid hsl(276, 96%, 18%);
+}
+
+.textArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textArea textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #94b90b;
+    font-size: 1rem;
+    resize: vertical; /* Allow vertical resizing */
+    transition: border 0.3s; /* Smooth transition for border change */
+}
+
+.textArea textarea:hover {
+    border: 1px solid hsl(276, 96%, 18%);
+}
+
+/* Media query for wider screens */
+@media (min-width: 768px) {
+    .LetsConnect {
+        flex-direction: row; /* Change to row for larger screens */
+    }
+
+    .LetsConnect hr {
+        height: 20vh; /* Vertical line for larger screens */
+        width: 1px; /* Adjust as needed */
+        border-left: 1px solid #fff; /* Create vertical line */
+        border-top: none; /* Remove horizontal line */
+        margin: 0 20px; /* Space between left and right elements */
+    }
+}

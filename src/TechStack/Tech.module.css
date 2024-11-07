@@ -1,0 +1,37 @@
+.Stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Stack h1:hover {
+    color: #cfd9dc; /* Change text color on hover */
+    text-shadow: 0 0 10px #cfd9dc, /* Outer glow */
+    0 0 20px #cfd9dc, /* Additional glow */
+    0 0 30px #cfd9dc; /* Even more glow */
+}
+
+.Stack hr {
+    width: 80%;
+}
+
+.Stack span {
+    color: green;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 600px) {
+    .tools {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

@@ -1,0 +1,137 @@
+.TimeLine {
+  background-color: #4a4a4a;
+  padding: 20px;
+}
+
+.TimeLine h1 {
+  color: #e6e6e6;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.TimeLine h1:hover {
+  color: #91cad8;
+  text-shadow: 0 0 15px #91cad8, 0 0 30px #91cad8, 0 0 45px #91cad8;
+}
+
+.TimeLine span {
+  color: #06ad3e;
+}
+
+.cdTimeline {
+  overflow: hidden;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.cdTimelineContainer {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.cdTimelineContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background: #777;
+  transform: translateX(-50%);
+}
+
+/* Animation for each timeline block */
+.cdTimelineBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .cdTimelineBlock {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cdTimelineBlock:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Image Styling */
+.cdTimelineImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.cdTimelineImg:hover {
+  transform: scale(1.05);
+}
+
+.cdTimelineImg img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* Content Styling */
+.cdTimelineContent {
+  background: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #f5f3f3;
+  position: relative;
+  max-width: 450px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+  .cdTimelineContent {
+    max-width: 600px;
+  }
+
+  .cdTimelineBlock:nth-child(even) .cdTimelineContent {
+    margin-left: 20px;
+  }
+}
+
+.cdTimelineDate {
+  color: #91cad8;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Read More Button */
+.btn--subtle {
+  display: inline-block;
+  color: #91cad8;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #91cad8;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn--subtle:hover {
+  color: #f5f3f3;
+  background-color: #91cad8;
+}

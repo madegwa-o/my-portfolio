@@ -1,0 +1,91 @@
+.MyProfile {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 0%;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.ProfileImage {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    min-width: 450px;
+}
+
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+}
+
+.MyProfile h1 {
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.MyProfile h1:hover {
+    color: #cfd9dc; /* Change text color on hover */
+    text-shadow: 0 0 10px #cfd9dc, /* Outer glow */
+    0 0 20px #cfd9dc, /* Additional glow */
+    0 0 30px #cfd9dc; /* Even more glow */
+}
+
+.MyProfile span {
+    margin: 20px;
+    color: #159646;
+    text-align: center;
+}
+
+.MyProfile button {
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+.MyProfile p {
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.MyProfile hr {
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Wrapping layout for smaller screens */
+@media (max-width: 768px) {
+    .MyProfile {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .ProfileImage {
+        width: 100%; /* Full width on small screens */
+        max-width: none;
+    }
+}
